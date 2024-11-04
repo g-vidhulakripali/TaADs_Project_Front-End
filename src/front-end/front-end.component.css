@@ -32,4 +32,13 @@
     color: #5f6368;
   }
   
+  .card {
+    border-radius: 10px;
+  }
+  .card-body {
+    padding: 1.25rem;
+  }
   
+  .mt-4{
+    padding: 2rem
+  }

@@ -9,18 +9,23 @@ import { SearchService } from '../search.service';
 export class FrontEndComponent {
   searchQuery: string = '';
   searchResults: any;
+  loading: boolean = false;
 
   constructor(private searchService: SearchService) {}
 
   onSearch() {
     if (this.searchQuery.trim()) {
+      this.loading = true;
+      this.searchResults = null;
       this.searchService.search(this.searchQuery).subscribe(
         (response) => {
           this.searchResults = response;
           console.log('Search results:', this.searchResults);
+          this.loading = false;
         },
         (error) => {
           console.error('Error:', error);
+          this.loading = false;
         }
       );
     }

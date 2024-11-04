@@ -1,20 +1,62 @@
 <div class="container d-flex justify-content-center">
-    <div class="search-bar bg-white rounded-pill shadow-sm d-flex align-items-center p-2 w-100">
-      <input
-        type="text"
-        class="form-control border-0 rounded-pill"
-        placeholder="Search Query..."
-        [(ngModel)]="searchQuery"
-        (keydown.enter)="onSearch()"
-      />
-      <button class="btn btn-link search-icon"  (click)="onSearch()">
-        <i class="fas fa-search"></i>
-      </button>
+  <div class="search-bar bg-white rounded-pill shadow-sm d-flex align-items-center p-2 w-100">
+    <input
+      type="text"
+      class="form-control border-0 rounded-pill"
+      placeholder="Search Query..."
+      [(ngModel)]="searchQuery"
+      (keydown.enter)="onSearch()"
+    />
+    <button class="btn btn-link search-icon" (click)="onSearch()">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</div>
+
+<!-- Loader -->
+<div *ngIf="loading" class="text-center mt-4">
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <p>Fetching search results...</p>
+</div>
+
+<!-- Search Results -->
+<div *ngIf="!loading && searchResults?.results?.length" class="mt-4">
+  <h4>Search Results:</h4>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let result of searchResults.results">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ result.title }}</h5>
+          <p class="card-subtitle text-muted">{{ result.instructor }}</p>
+          <hr />
+          <p><strong>Credits:</strong> {{ result.credits }}</p>
+          <p><strong>Duration:</strong> {{ result.duration }}</p>
+          <p><strong>Evaluation:</strong> {{ result.evaluation }}</p>
+          <p><strong>Frequency:</strong> {{ result.frequency }}</p>
+          <p><strong>Time:</strong> {{ result.time }}</p>
+          <p><strong>Prerequisites:</strong> {{ result.prerequisites }}</p>
+          <p><strong>Course Type:</strong> {{ result.course_type }}</p>
+          <h6 class="mt-3">Learning Objectives:</h6>
+          <ul>
+            <li *ngFor="let objective of result.learning_obj.split('\\n')">
+              {{ objective }}
+            </li>
+          </ul>
+          <h6>Course Contents:</h6>
+          <ul>
+            <li *ngFor="let content of result.course_contents.split('\\n')">
+              {{ content }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-  
-  <div *ngIf="searchResults" class="mt-4">
-    <h4>Search Results:</h4>
-    <pre>{{ searchResults | json }}</pre>
-  </div>
-  
+</div>
+
+<!-- No Results Found -->
+<div *ngIf="!loading && !searchResults?.results?.length" class="text-center mt-4">
+  <p>No results found.</p>
+</div>
