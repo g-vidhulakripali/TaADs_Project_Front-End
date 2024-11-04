@@ -1,0 +1,35 @@
+/* Center container styling */
+.container {
+    max-width: 600px;
+    padding-top: 10%;
+  }
+  
+  /* Customize the search icon button */
+  .search-icon {
+    font-size: 1.5rem;
+    color: #5f6368;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .search-icon:focus {
+    outline: none;
+  }
+  
+  /* Styling for the input field */
+  .search-bar input[type="text"] {
+    box-shadow: none; /* Remove the inner shadow */
+  }
+  
+
+  /* Set a maximum width for the search bar */
+.search-bar {
+    max-width: 600px; /* Adjust this width as needed */
+  }
+  
+  .search-icon i {
+    font-size: 1.2rem; /* Adjust icon size as needed */
+    color: #5f6368;
+  }
+  
+  

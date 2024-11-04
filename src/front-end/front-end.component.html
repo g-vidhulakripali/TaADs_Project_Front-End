@@ -1,0 +1,19 @@
+<div class="container d-flex justify-content-center">
+    <div class="search-bar bg-white rounded-pill shadow-sm d-flex align-items-center p-2 w-100">
+      <input
+        type="text"
+        class="form-control border-0 rounded-pill"
+        placeholder="Search Google or type a URL"
+        [(ngModel)]="searchQuery"
+      />
+      <button class="btn btn-link search-icon" (click)="onSearch()">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+  
+  <div *ngIf="searchResults" class="mt-4">
+    <h4>Search Results:</h4>
+    <pre>{{ searchResults | json }}</pre>
+  </div>
+  
