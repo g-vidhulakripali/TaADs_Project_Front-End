@@ -1,0 +1,13 @@
+.header {
+  background: rgba(0, 4, 40, 0.9); /* Matches gradient background */
+  color: white;
+  border-bottom: 2px solid #004e92;
+}
+.nav-link {
+  color: white !important;
+  margin: 0 10px;
+}
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
