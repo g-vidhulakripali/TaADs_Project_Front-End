@@ -33,12 +33,51 @@
   }
   
   .card {
-    border-radius: 10px;
-  }
-  .card-body {
-    padding: 1.25rem;
+    border-radius: 15px; /* Softer corners for modern design */
+    overflow: hidden; /* Ensures child elements stay within rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth hover effect */
   }
   
-  .mt-4{
-    padding: 2rem
+  .card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
   }
+  
+  .card-body {
+    padding: 1.5rem; /* Slightly larger padding for better spacing */
+    background-color: #ffffff; /* Ensure the background is clean white */
+    color: #333; /* Use a neutral dark color for text */
+  }
+  
+  .card-title {
+    font-size: 1.25rem; /* Slightly larger title size */
+    font-weight: 600; /* Make titles bold */
+    color: #004e92; /* Accent color for titles */
+    margin-bottom: 0.75rem; /* Space below the title */
+  }
+  
+  .card-subtitle {
+    font-size: 1rem; /* Subtitle size */
+    color: #6c757d; /* Light gray color for subtitles */
+    margin-bottom: 1rem; /* Space below the subtitle */
+  }
+  
+  hr {
+    border-color: rgba(0, 0, 0, 0.1); /* Light divider line */
+    margin: 1rem 0; /* Space above and below the divider */
+  }
+  
+  ul {
+    padding-left: 1.5rem; /* Indent for list items */
+    color: #555; /* Softer color for lists */
+  }
+  
+  li {
+    margin-bottom: 0.5rem; /* Space between list items */
+  }
+  
+  .mt-4 {
+    margin-top: 2rem; /* Adjust spacing for sections */
+  }
+  

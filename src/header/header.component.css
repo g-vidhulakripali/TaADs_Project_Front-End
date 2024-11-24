@@ -6,8 +6,26 @@
 .nav-link {
   color: white !important;
   margin: 0 10px;
+  cursor: pointer;
 }
 .nav-link.active {
   font-weight: bold;
   text-decoration: underline;
+}
+.logo {
+  height: 40px; /* Adjust height to fit header */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between logo and text */
+  display: block; /* Ensure it's treated as an inline-block element */
+}
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Center the logo and text vertically */
+}
+.brand-title {
+  font-family: 'Poppins', Arial, sans-serif; /* Use the imported font */
+  font-size: 1.5rem; /* Adjust the size */
+  font-weight: 600; /* Semi-bold for emphasis */
+  color: #fff; /* Ensure the text is visible */
+  margin-left: 10px; /* Add space between the logo and text */
 }

@@ -1,6 +1,9 @@
 <header class="header navbar navbar-expand-lg navbar-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">RAG Application</a>
+    <a class="navbar-brand" href="#">
+      <img src="./assets/logo.jpg" alt="Logo" class="logo">
+      <span class="brand-title">Smart Course Finder</span>
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+          <a class="nav-link" (click)="navigateHome()" routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/query" routerLinkActive="active">Query</a>
