@@ -21,6 +21,14 @@
   <p>Fetching search results...</p>
 </div>
 
+<!-- Generative Text Area -->
+<div *ngIf="generatedText" class="generative-text">
+  {{ generatedText }}
+</div>
+<div class="text-center mt-4">
+  <button class="btn btn-primary" (click)="generateText()">Generate Text</button>
+</div>
+
 <!-- Search Results -->
 <div *ngIf="!loading && searchResults?.results?.length" class="mt-4">
   <h4>Search Results:</h4>
