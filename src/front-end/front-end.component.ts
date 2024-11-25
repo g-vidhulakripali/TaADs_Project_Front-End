@@ -29,6 +29,7 @@ export class FrontEndComponent {
         (response) => {
           this.searchResults = response;
           console.log('Search results:', this.searchResults);
+          this.generateText();
           this.loading = false;
         },
         (error) => {
@@ -41,7 +42,7 @@ export class FrontEndComponent {
 
   // Method to simulate generative text with typewriter effect
   generateText() {
-    this.fullGeneratedText = `This is a generated response based on your query: "${this.searchQuery}"`;
+    this.fullGeneratedText = `${this.searchResults.response}`;
     this.generatedText = '';
     let index = 0;
 
