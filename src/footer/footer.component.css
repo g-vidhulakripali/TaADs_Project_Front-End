@@ -1,0 +1,5 @@
+.footer {
+  background: rgba(0, 4, 40, 0.9); /* Matches gradient background */
+  color: white;
+  border-top: 2px solid #004e92;
+}
