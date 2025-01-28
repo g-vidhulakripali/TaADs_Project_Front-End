@@ -1,7 +1,7 @@
 /* Center container styling */
 .container {
   max-width: 600px;
-  padding-top: 10%;
+  padding-top: 2rem; /* Reduced padding for less gap */
 }
 
 /* Customize the search icon button */
@@ -80,13 +80,106 @@ li {
   margin-top: 2rem; /* Adjust spacing for sections */
 }
 
-/* Generative Text Area Styling */
 .generative-text {
   margin-top: 1rem;
-  padding: 1rem; /* Add padding for spacing around the text */
-  font-size: 1.2rem; /* Adjust font size as needed */
-  color: white; /* Text color to contrast with the background */
-  text-align: center; /* Center the text horizontally */
-  line-height: 1.5; /* Improve readability with line spacing */
-  backdrop-filter: blur(5px); /* Add subtle blur to the background */
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  color: white;
+  text-align: left;
+  line-height: 1.6;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+.generative-text p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.generative-text strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.search-query-card {
+  margin-top: 0; /* Remove extra margin */
+  margin-bottom: 1rem; /* Slight space below */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.course-title-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.course-title-card h5 {
+  color: #004e92;
+  font-weight: 600;
+}
+
+.query-title-card {
+  display: inline-block; /* Dynamically adjust width based on content */
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  max-width: 90%; /* Ensure it doesn’t exceed the container width */
+  text-align: left;
+  white-space: nowrap; /* Prevent content from wrapping */
+}
+
+.query-title-card h5 {
+  color: #004e92;
+  font-weight: 600;
+}
+
+.query-title-card p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.query-title-card h6 {
+  font-size: 1rem;
+  color: #6c757d; /* Light gray color */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase; /* Optional: Make it uppercase */
+  font-weight: 500; /* Optional: Medium weight for emphasis */
+}
+
+.result-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.result-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c757d;
+  text-transform: uppercase;
+}
+
+.course-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #004e92; /* Accent color for the title */
+}
+
+@media (max-width: 768px) {
+  .query-title-card {
+    white-space: normal; /* Allow wrapping on smaller screens */
+    max-width: 100%; /* Ensure it fits within the viewport */
+  }
 }

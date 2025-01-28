@@ -14,58 +14,30 @@
 </div>
 
 <!-- Loader -->
-<div *ngIf="loading" class="text-center mt-4">
+<div *ngIf="loading" class="text-center mt-3">
   <div class="spinner-border text-primary" role="status">
     <span class="sr-only">Loading...</span>
   </div>
   <p>Fetching search results...</p>
 </div>
 
-<!-- Generative Text Area -->
-<div *ngIf="generatedText" class="generative-text">
-  {{ generatedText }}
-</div>
-<!-- <div class="text-center mt-4">
-  <button class="btn btn-primary" (click)="generateText()">Generate Text</button>
-</div> -->
-
-<!-- Search Results -->
-<div *ngIf="!loading && searchResults?.result?.title" class="mt-4">
-  <h4 class="text-center mb-4">Search Results:</h4>
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-6">
-      <div class="card mb-4 shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title text-center">{{ searchResults.result.title }}</h5>
-          <p class="card-subtitle text-muted text-center">{{ searchResults.result.instructor }}</p>
-          <hr />
-          <p><strong>Credits:</strong> {{ searchResults.result.credits }}</p>
-          <p><strong>Duration:</strong> {{ searchResults.result.duration }}</p>
-          <p><strong>Evaluation:</strong> {{ searchResults.result.evaluation }}</p>
-          <p><strong>Frequency:</strong> {{ searchResults.result.frequency }}</p>
-          <p><strong>Time:</strong> {{ searchResults.result.time }}</p>
-          <p><strong>Prerequisites:</strong> {{ searchResults.result.prerequisites }}</p>
-          <p><strong>Course Type:</strong> {{ searchResults.result.course_type }}</p>
-          <h6 class="mt-3"><strong>Learning Objectives:</strong></h6>
-          <ul>
-            <li *ngFor="let objective of searchResults.result.learning_obj.split('\n')">
-              {{ objective }}
-            </li>
-          </ul>
-          <h6><strong>Course Contents:</strong></h6>
-          <ul>
-            <li *ngFor="let content of searchResults.result.course_contents.split('\n')">
-              {{ content }}
-            </li>
-          </ul>
-        </div>
-      </div>
+<!-- Combined Card for Query and Title -->
+<div *ngIf="searchResults?.result?.title" class="mt-3 d-flex justify-content-center">
+  <div class="query-title-card" style="    width: 70%; height: 30%;">
+    <p *ngIf="displayedQuery"><strong>Your query:</strong> {{ displayedQuery }}</p>
+    <div class="result-line">
+      <span class="result-label">Result:</span>
+      <span class="course-title">{{ searchResults.result.title }}</span>
     </div>
   </div>
 </div>
 
+<!-- Generated Text -->
+<div *ngIf="generatedText" class="generative-text">
+  {{ generatedText }}
+</div>
 
 <!-- No Results Found -->
-<div *ngIf="!loading && !searchResults?.results?.title" class="text-center mt-4">
+<div *ngIf="!loading && !searchResults?.result?.title" class="text-center mt-3">
   <p>No results found.</p>
 </div>
