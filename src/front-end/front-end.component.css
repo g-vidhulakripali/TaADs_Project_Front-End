@@ -1,0 +1,185 @@
+/* Center container styling */
+.container {
+  max-width: 600px;
+  padding-top: 2rem; /* Reduced padding for less gap */
+}
+
+/* Customize the search icon button */
+.search-icon {
+  font-size: 1.5rem;
+  color: #5f6368;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search-icon:focus {
+  outline: none;
+}
+
+/* Styling for the input field */
+.search-bar input[type="text"] {
+  box-shadow: none; /* Remove the inner shadow */
+}
+
+/* Set a maximum width for the search bar */
+.search-bar {
+  max-width: 600px; /* Adjust this width as needed */
+}
+
+.search-icon i {
+  font-size: 1.2rem; /* Adjust icon size as needed */
+  color: #5f6368;
+}
+
+.card {
+  border-radius: 15px; /* Softer corners for modern design */
+  overflow: hidden; /* Ensures child elements stay within rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.card-body {
+  padding: 1.5rem; /* Slightly larger padding for better spacing */
+  background-color: #ffffff; /* Ensure the background is clean white */
+  color: #333; /* Use a neutral dark color for text */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Slightly larger title size */
+  font-weight: 600; /* Make titles bold */
+  color: #004e92; /* Accent color for titles */
+  margin-bottom: 0.75rem; /* Space below the title */
+}
+
+.card-subtitle {
+  font-size: 1rem; /* Subtitle size */
+  color: #6c757d; /* Light gray color for subtitles */
+  margin-bottom: 1rem; /* Space below the subtitle */
+}
+
+hr {
+  border-color: rgba(0, 0, 0, 0.1); /* Light divider line */
+  margin: 1rem 0; /* Space above and below the divider */
+}
+
+ul {
+  padding-left: 1.5rem; /* Indent for list items */
+  color: #555; /* Softer color for lists */
+}
+
+li {
+  margin-bottom: 0.5rem; /* Space between list items */
+}
+
+.mt-4 {
+  margin-top: 2rem; /* Adjust spacing for sections */
+}
+
+.generative-text {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  color: white;
+  text-align: left;
+  line-height: 1.6;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+.generative-text p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.generative-text strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.search-query-card {
+  margin-top: 0; /* Remove extra margin */
+  margin-bottom: 1rem; /* Slight space below */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.course-title-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.course-title-card h5 {
+  color: #004e92;
+  font-weight: 600;
+}
+
+.query-title-card {
+  display: inline-block; /* Dynamically adjust width based on content */
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  max-width: 90%; /* Ensure it doesn’t exceed the container width */
+  text-align: left;
+  white-space: nowrap; /* Prevent content from wrapping */
+}
+
+.query-title-card h5 {
+  color: #004e92;
+  font-weight: 600;
+}
+
+.query-title-card p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.query-title-card h6 {
+  font-size: 1rem;
+  color: #6c757d; /* Light gray color */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase; /* Optional: Make it uppercase */
+  font-weight: 500; /* Optional: Medium weight for emphasis */
+}
+
+.result-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.result-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c757d;
+  text-transform: uppercase;
+}
+
+.course-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #004e92; /* Accent color for the title */
+}
+
+@media (max-width: 768px) {
+  .query-title-card {
+    white-space: normal; /* Allow wrapping on smaller screens */
+    max-width: 100%; /* Ensure it fits within the viewport */
+  }
+}
