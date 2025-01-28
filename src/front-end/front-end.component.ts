@@ -13,11 +13,13 @@ export class FrontEndComponent {
   generatedText: string | null = null; // Displayed text
   fullGeneratedText: string = ''; // Full text to type out
   typingInterval: any; // Typing interval for typewriter effect
+  displayedQuery: string = '';
 
   constructor(private searchService: SearchService) {}
 
   // Method to perform search
   onSearch() {
+    this.displayedQuery = this.searchQuery;
     if (this.searchQuery.trim()) {
       this.loading = true;
       this.searchResults = null;
